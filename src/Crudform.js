@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const Crudform = () => {
     const [list, setList] = useState([]);
@@ -9,6 +9,11 @@ const Crudform = () => {
     const [editingitem, setEditingitem] = useState({
         id: "",
         isediting: false
+    })
+    const inputTxt = useRef(null);
+
+    useEffect(() => {
+        inputTxt.current.focus()
     })
 
     const handlechange = (e) => {
@@ -36,7 +41,8 @@ const Crudform = () => {
         })
         setList(newtodo);
     }
-    const handleedit = (id) => {
+    const handleedit = (e, id) => {
+        e.preventDefault();
         setEditingitem({
             ...editingitem,
             id: id,
@@ -81,7 +87,7 @@ const Crudform = () => {
         <div className="form-content">
             <form>
                 <div className="form-content">
-                    <input type="text" name="message" id="message" placeholder="enter a message" value={message.text} onChange={handlechange} />
+                    <input type="text" name="message" id="message" placeholder="enter a message" value={message.text} onChange={handlechange} ref={inputTxt}/>
                     {
                         editingitem.isediting ? (<button type="submit" onClick={handleeditable}>edit</button>
                         ) : (<button type="submit" onClick={handleclick}>add</button>)
@@ -97,7 +103,7 @@ const Crudform = () => {
                             return (
                                 <li key={id}>
                                     <span>{text}</span>
-                                    <button onClick={() => handleedit(id)}>edit</button>
+                                    <button onClick={(e) => handleedit(e, id)}>edit</button>
                                     <button onClick={() => handledelte(id)}>delete</button>
                                 </li>
                             )
