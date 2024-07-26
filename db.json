@@ -1,0 +1,18 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "ram",
+      "email": "ram@gmail.com",
+      "address": "hyderabad",
+      "phone": "9123456894"
+    },
+    {
+      "id": 2,
+      "name": "nihirat",
+      "email": "nihirat@gmail.com",
+      "address": "pune",
+      "phone": "8492345694"
+    }
+  ]
+}

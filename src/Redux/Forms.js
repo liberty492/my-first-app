@@ -24,7 +24,7 @@ function Form() {
             />
           </div>
           <button
-            className="btn btn-primary col-1"
+            className="btn btn-primary mx-2 col-1"
             onClick={() => {
               dispatch({ type: "deposit", payload: amount });
               setAmount("");

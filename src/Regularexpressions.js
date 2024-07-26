@@ -1,5 +1,5 @@
-import react, { useState } from 'react'
-import { Card, CardTitle } from 'react-bootstrap';
+import { useState } from 'react'
+import { CardTitle } from 'react-bootstrap';
 
 function Regularexpression() {
 
@@ -13,6 +13,7 @@ function Regularexpression() {
     }
 
     const validationError = () => {
+
         if (username === "" || username === null) {
             setError("username should not be empty");
         }
@@ -20,7 +21,7 @@ function Regularexpression() {
             setError(`username must be atleast 4 characters`);
         }
         else {
-            setError(<p style={{ color: "green",fontWeight:"bold"}}>good name..</p>);
+            setError(<p style={{ color: "green", fontWeight: "bold" }}>good name..</p>);
         }
     }
 

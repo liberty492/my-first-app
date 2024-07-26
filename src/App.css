@@ -6,6 +6,16 @@
   height: 40vmin;
   pointer-events: none;
 }
+table{
+  width: 100px;
+}
+td{
+  border: 1px solid #07a631;
+}
+
+button {
+  
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

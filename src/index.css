@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App{
+  align-items: center;
+}
+.cocktail-data{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.cocktail-data li img{
+   width: 100%;
+   max-height: 250px;
+   object-fit: cover;
+}
+@media screen and (min-width:769px){
+  .cocktail-data{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+Table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.entity{
+  margin-top: 26%;
+}
+.row{
+  display: grid;
+}

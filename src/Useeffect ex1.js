@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-const Toggle = () => {
-
+const Toggle = (props) => {
+    console.log(props);
     const [count, setCount] = useState(0);
-    const [toggle , setToggle] = useState(true);
+    const [toggle, setToggle] = useState(true);
 
     useEffect(() => {
         console.log("this is from useeffect..", count)
-    }, [count,toggle])
+    }, [count, toggle])
 
     return (
         <div>
-            <h2 onClick={()=>setToggle(!toggle)}>{toggle ? 'open' : 'close'}</h2>
+            <p>{props.greet}</p>
+            <h2 onClick={() => setToggle(!toggle)}>{toggle ? 'open' : 'close'}</h2>
             <h1>{count}</h1>
+            <p>{props.greet}</p>
             <button onClick={() => setCount(count + 1)}>+</button>
-            <h3>example-1 of useeffect</h3>
         </div>
     )
 }

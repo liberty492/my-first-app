@@ -3,7 +3,7 @@ import { RingLoader } from "react-spinners";
 
 const ApiData = 'https://jsonplaceholder.typicode.com/users';
 
-export const Useeffctapi = () => {
+export const Jsonplaceholderapi = () => {
 
     const [usersdata, setUsersdata] = useState([]);
     const [loader, setLoader] = useState(false);
@@ -14,7 +14,6 @@ export const Useeffctapi = () => {
         setIseror({ status: false, msg: '' });
         try {
             const response = await fetch(apiurl);
-            console.log('json data is', response);
             const data = await response.json()
             setUsersdata(data);
             setLoader(false);
@@ -23,16 +22,14 @@ export const Useeffctapi = () => {
                 throw new Error('Data not available');
             }
         } catch (error) {
-            console.log(error.message);
             setIseror({ status: true, msg: error.message || 'something went wrong,no data' });
             setLoader(false);
-            console.log(error);
         }
     }
 
     useEffect(() => {
         fetchusersdata(ApiData);
-    }, [])
+    }, []);
 
     if (loader) {
         return <center>
@@ -58,9 +55,10 @@ export const Useeffctapi = () => {
                         usersdata.map((eachobj) => {
                             const { id, name, email, username } = eachobj
                             return (
-                                <li>
+                                <li key={id}>
                                     <div>{name}</div>
                                     <div>{email}</div>
+                                    <div>{username}</div>
                                 </li>
                             )
                         })

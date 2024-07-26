@@ -24,7 +24,7 @@ const Crudform = () => {
             text: e.target.value
         })
     }
-    const handleclick = (e) => {
+    const  handleclick = (e) => {
         e.preventDefault();
         const newobj = {
             text: message.text,
@@ -60,7 +60,7 @@ const Crudform = () => {
 
     }
 
-    const handleeditable = (e) => {
+    const  handleeditable = (e) => {
         e.preventDefault();
         let newtodos = list.map((eachobj) => {
             if (eachobj.id === editingitem.id) {
@@ -88,18 +88,25 @@ const Crudform = () => {
         <div className="form-content">
             <form>
                 <div className="form-content">
-                    <input type="text" name="message" id="message" placeholder="enter a message" value={message.text} onChange={handlechange} ref={inputTxt}/>
+                    <input
+                        type="text"
+                        name="message"
+                        id="message"
+                        placeholder="enter a message"
+                        value={message.text}
+                        onChange={handlechange}
+                        ref={inputTxt}
+                    />
                     {
-                        editingitem.isediting ? (<button type="submit" onClick={handleeditable}>edit</button>
+                        editingitem.isediting ? (<button type="submit" onClick={handleeditable}>update</button>
                         ) : (<button type="submit" onClick={handleclick}>add</button>)
                     }
                 </div>
                 <hr />
-                {list.length == 0 && <h4>there is no items in the list</h4>}
+                {list.length === 0 && <h4>there is no items in the list</h4>}
                 <ul>
                     {
                         list.map((eachobj) => {
-                            console.log(eachobj);
                             const { text, id } = eachobj;
                             return (
                                 <li key={id}>
