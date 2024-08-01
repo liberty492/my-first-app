@@ -10,10 +10,9 @@ function Crudoperations() {
   const handleInputChange = (event) => {
     setInput(event.target.value);
   };
-
   // Add item to the list
   const handleAddItem = () => {
-    if (input.trim() === '') return;
+    // if (input.trim() === '') return;
     if (editIndex !== null) {
       const updatedItems = items.map((item, index) =>
         index === editIndex ? input : item

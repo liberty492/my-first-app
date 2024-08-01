@@ -16,8 +16,9 @@ const Childtoparent = () => {
 export default Childtoparent;
 
 function Child(props) {
+    let data=2;
 
     return (
-        <button onClick={() => props.setcountchange(2)}>increment(+)</button>
+        <button onClick={() => props.setcountchange(data)}>increment(+)</button>
     )
 }

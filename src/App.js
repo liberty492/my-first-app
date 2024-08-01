@@ -28,6 +28,9 @@ import Stopwatch from './Stopwatch';
 import { useState, createContext } from 'react';
 // import { create } from 'json-server';
 import Contextapi from './Contextapi';
+import Crudoperations from './Crudoperations';
+import Trycrud from './Trycrud';
+import LoginUser from './LoginUser';
 
 export const store = createContext();
 
@@ -35,10 +38,13 @@ function App() {
   const [count, setcount] = useState(0);
   return (
     <div>
-      <store.Provider value={[count, setcount]}>
+      {/* <store.Provider value={[count, setcount]}>
         <Contextapi />
-      </store.Provider>
+      </store.Provider> */}
       {/* Contextapi */}
+      {/* <Trycrud/> */}
+      <LoginUser/>
+      {/* <Crudoperations/> */}
       {/* <BrowserRouter>
       <Routes>
         <Route path='/' element={<EmpListing/>}/>
