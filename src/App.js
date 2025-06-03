@@ -26,7 +26,7 @@ import { useState, createContext } from 'react';
 // import { create } from 'json-server';
 import Contextapi from './Contextapi';
 import Crudoperations from './Crudoperations';
-import Trycrud from './Trycrud';
+//import Trycrud from './Trycrud';
 import LoginUser from './LoginUser';
 import CocktailApi from './CocktailApiuseeffect ex3';
 
