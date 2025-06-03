@@ -13,7 +13,6 @@ const EmpListing = () => {
 
     const handleDetails = (id) => {
         navigate("employee/details/" + id);
-
     }
     // useEffect(() => {
     //     fetch("http://localhost:8000/employee").then((res) => {

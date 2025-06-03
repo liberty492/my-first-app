@@ -10,7 +10,7 @@ const CocktailApi = () => {
         const response = await fetch(apiURL);
         const { drinks } = await response.json();
         setdata(drinks);
-    };
+    }; 
 
     const handlechange = (e) => {
         e.preventDefault();

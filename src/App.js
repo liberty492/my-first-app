@@ -1,6 +1,4 @@
-/* eslint-disable react/jsx-no-undef */
 import './App.css';
-import CocktaiApi from './CocktailApiuseeffect ex3';
 import Crudform from './Crudform';
 import Todolist from './Crudtelugu';
 import Index from './Formvalidation';
@@ -12,7 +10,6 @@ import SearchData from './SearchData';
 import Stries from './Stries';
 import Toggle from './Useeffect ex1';
 import { Jsonplaceholderapi, jsonplaceholderapi } from './UseeffectApi ex2';
-import Home from './localstorageCRUD/Routes';
 import UseReducer from './UseReducer';
 import UseReducerAPI from './UseReducerAPI';
 import FilterGreterthan40 from './interviewscoding/filtergreterthan40';
@@ -31,6 +28,7 @@ import Contextapi from './Contextapi';
 import Crudoperations from './Crudoperations';
 import Trycrud from './Trycrud';
 import LoginUser from './LoginUser';
+import CocktailApi from './CocktailApiuseeffect ex3';
 
 export const store = createContext();
 
@@ -40,18 +38,22 @@ function App() {
     <div>
       {/* <store.Provider value={[count, setcount]}>
         <Contextapi />
-      </store.Provider> */}
+      </store.Provider> 
+      <LoginUser/>*/}
+      {/* <CocktailApi/> */}
       {/* Contextapi */}
       {/* <Trycrud/> */}
-      <LoginUser/>
+      {/* <LoginUser/> */}
+      {/* <SearchData/> */}
       {/* <Crudoperations/> */}
+      {/* <Regularexpression /> */}
       {/* <BrowserRouter>
       <Routes>
         <Route path='/' element={<EmpListing/>}/>
         <Route path='employee/create' element={<EmpCreate/>}/>
         <Route path='employee/details/:empid' element={<EmpDetails/>}/>
       </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter> */ }
       {/* <Practice />
      // <Hideshow />
       //<Index />
@@ -59,12 +61,11 @@ function App() {
     // <Crudform />
     // <Toggle />
     //<Jsonplaceholderapi />
-    //<CocktaiApi />
     //<Todolist />
     //<Home />
     // <Stries />
     //<SearchData />
-    //<Regularexpression />
+    <Regularexpression />
     //  <>
     //    <Form />
     //    <Account />
@@ -77,7 +78,7 @@ function App() {
     //<Checkboxselection />
      //<Childtoparent /> */}
       {/* <FormData/> */}
-      {/* <Stopwatch/> */}
+      <Stopwatch/>
 
     </div>
   );

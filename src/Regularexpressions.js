@@ -13,7 +13,6 @@ function Regularexpression() {
     }
 
     const validationError = () => {
-
         if (username === "" || username === null) {
             setError("username should not be empty");
         }
@@ -25,12 +24,22 @@ function Regularexpression() {
         }
     }
 
-
-
     return (
         <div class="container">
             <div class="row align-items-center vh-100">
-                <div class="col-6 mx-auto">
+                <div class="col-4 ">
+                    <div class="card shadow border">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <CardTitle>username validation</CardTitle>
+                        </div>
+                        <div>
+                            <input type='text' id='username' name='username' value={username} onChange={handlechange} />&nbsp;&nbsp;
+                            <span style={{ color: "red" }}>{error}</span><br /><br />
+                            <button onClick={validationError}>vallidation</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 ">
                     <div class="card shadow border">
                         <div class="card-body d-flex flex-column align-items-center">
                             <CardTitle>username validation</CardTitle>

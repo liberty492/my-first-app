@@ -6,7 +6,7 @@ const Crudform = () => {
     const [message, setMessage] = useState({
         text: "",
         id: ""
-    })
+    }) 
     const [editingitem, setEditingitem] = useState({
         id: "",
         isediting: false

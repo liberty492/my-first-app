@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button,} from "react-bootstrap";
+import { Button, } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 
@@ -18,9 +18,7 @@ const Todolist = () => {
         const newtodo = [...listtodo, todo];
         setListtodo(newtodo);
         setTodo("");
-
     }
-
 
     return (
         <div clasName="card">

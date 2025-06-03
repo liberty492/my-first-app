@@ -11,20 +11,19 @@ function Crudoperations() {
     setInput(event.target.value);
   };
   // Add item to the list
-  const handleAddItem = () => {
-    // if (input.trim() === '') return;
-    if (editIndex !== null) {
-      const updatedItems = items.map((item, index) =>
-        index === editIndex ? input : item
-      );
-      setItems(updatedItems);
-      setEditIndex(null);
-    } else {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (editIndex === null) {
       setItems([...items, input]);
+    } else {
+      const updatedTasks = items.map((task, index) =>
+        index === editIndex ? input : task
+      );
+      setItems(updatedTasks);
+      setEditIndex(null);
     }
     setInput('');
   };
-
   // Edit an item from the list
   const handleEditItem = (index) => {
     setInput(items[index]);
@@ -46,7 +45,7 @@ function Crudoperations() {
           onChange={handleInputChange}
           placeholder="Enter item"
         />
-        <button onClick={handleAddItem}>
+        <button onClick={handleSubmit}>
           {editIndex !== null ? 'Update Item' : 'Add Item'}
         </button>
       </div>
